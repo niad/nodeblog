@@ -1,0 +1,15 @@
+extends layout
+
+block script
+  script(src="/js/login.js")
+    
+block content
+  //- 폼 내용 잘 처리해야함 
+  form(action="login", method="post")
+    | 이름
+    input(type="text", name="loginId")
+    br/
+    | 패스워드
+    input(type="password", name="password")
+    br/
+    input(type="submit", value="로그인")

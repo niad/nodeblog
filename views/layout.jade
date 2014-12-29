@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/css/style.css')
+
+  body
+
+    include ./layout/header.jade
+    hr
+
+
+    block content
+
+
+    hr
+    include ./layout/footer.jade
+
+
+  script(src='/js/lib/jquery-2.1.3.min.js')
+  block script
