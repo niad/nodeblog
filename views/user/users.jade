@@ -1,0 +1,26 @@
+extends ../layout
+
+block css
+   link(rel='stylesheet', href='/css/ui.jqgrid.css')
+
+block content
+
+   h3 사용자 목록
+
+   //-
+      table
+         - for (var i=0; i<result.length; i+=1)
+            tr
+               td #{result[i].id}
+               td #{result[i].name}
+               td #{result[i].email}
+               td #{result[i].type}
+
+
+   table#grid
+   div#pager
+
+block script
+   script(type="text/javascript", src="/js/lib/jquery.jqGrid.min.js")
+
+   script(type="text/javascript", src="/js/user/users.js")

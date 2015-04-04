@@ -10,7 +10,16 @@ router.get('/', function(req, res) {
   users.push({id:"3", name:"사용자 3", email:"user3@niad.pe.kr", type:"MEMBER"});
 
 
-  res.render('user/users', {result: users});
+
+  var jsonMsg = {
+    page: 1,
+    total: 1,
+    records: 3,
+    rows : users
+  };
+
+
+  res.send('user/users', jsonMsg);
 
 });
 
